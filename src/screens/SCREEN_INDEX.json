@@ -1,0 +1,177 @@
+[
+  {
+    "screenId": "258a32a5c5054c259844053278eeb756",
+    "title": "Game Over",
+    "componentName": "GameOver",
+    "file": "src/screens/GameOver.tsx",
+    "buttons": 3,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "play-again-1",
+        "kind": "button",
+        "label": "Play Again",
+        "index": 0
+      },
+      {
+        "id": "share-result-2",
+        "kind": "button",
+        "label": "Share Result",
+        "index": 1
+      },
+      {
+        "id": "exit-to-menu-3",
+        "kind": "button",
+        "label": "Exit to Menu",
+        "index": 2
+      }
+    ]
+  },
+  {
+    "screenId": "e17e8d02cf624dffa7c901638ffec7a0",
+    "title": "Main Menu",
+    "componentName": "MainMenu",
+    "file": "src/screens/MainMenu.tsx",
+    "buttons": 4,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "start-marathon-1",
+        "kind": "button",
+        "label": "Start Marathon",
+        "index": 0
+      },
+      {
+        "id": "settings-cfg-01-2",
+        "kind": "button",
+        "label": "Settings CFG_01",
+        "index": 1
+      },
+      {
+        "id": "controls-inp-map-3",
+        "kind": "button",
+        "label": "Controls INP_MAP",
+        "index": 2
+      },
+      {
+        "id": "high-scores-db-read-4",
+        "kind": "button",
+        "label": "High Scores DB_READ",
+        "index": 3
+      }
+    ]
+  },
+  {
+    "screenId": "b1bab7ef581841d3a0c6a0b24971830d",
+    "title": "Controls Help",
+    "componentName": "ControlsHelp",
+    "file": "src/screens/ControlsHelp.tsx",
+    "buttons": 2,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "button-1-1",
+        "kind": "button",
+        "label": "Button 1",
+        "index": 0
+      },
+      {
+        "id": "initialize-2",
+        "kind": "button",
+        "label": "Initialize",
+        "index": 1
+      }
+    ]
+  },
+  {
+    "screenId": "e2cf22cf7e204c57abb1bb4e55efabec",
+    "title": "Game Board",
+    "componentName": "GameBoard",
+    "file": "src/screens/GameBoard.tsx",
+    "buttons": 8,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "button-1-1",
+        "kind": "button",
+        "label": "Button 1",
+        "index": 0
+      },
+      {
+        "id": "button-2-2",
+        "kind": "button",
+        "label": "Button 2",
+        "index": 1
+      },
+      {
+        "id": "button-3-3",
+        "kind": "button",
+        "label": "Button 3",
+        "index": 2
+      },
+      {
+        "id": "button-4-4",
+        "kind": "button",
+        "label": "Button 4",
+        "index": 3
+      },
+      {
+        "id": "button-5-5",
+        "kind": "button",
+        "label": "Button 5",
+        "index": 4
+      },
+      {
+        "id": "button-6-6",
+        "kind": "button",
+        "label": "Button 6",
+        "index": 5
+      },
+      {
+        "id": "button-7-7",
+        "kind": "button",
+        "label": "Button 7",
+        "index": 6
+      },
+      {
+        "id": "hard-drop-8",
+        "kind": "button",
+        "label": "HARD DROP",
+        "index": 7
+      }
+    ]
+  },
+  {
+    "screenId": "a72bc25f1bd4408dbb6594ee8e32e2a0",
+    "title": "Pause Overlay",
+    "componentName": "PauseOverlay",
+    "file": "src/screens/PauseOverlay.tsx",
+    "buttons": 3,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "resume-1",
+        "kind": "button",
+        "label": "Resume",
+        "index": 0
+      },
+      {
+        "id": "restart-2",
+        "kind": "button",
+        "label": "Restart",
+        "index": 1
+      },
+      {
+        "id": "main-menu-3",
+        "kind": "button",
+        "label": "Main Menu",
+        "index": 2
+      }
+    ]
+  }
+]
