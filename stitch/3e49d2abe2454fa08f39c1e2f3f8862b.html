@@ -1,0 +1,23 @@
+# Tetris Supervisor Root Fix 0514i PRD
+
+## Overview
+Tetris Supervisor Root Fix 0514i turns the user's request into a directly usable application. The first screen is not a landing page; it is the real workflow surface where the user can inspect data, take actions, and recover from empty or error states.
+
+## Goals
+- Working first-load playable game surface.
+- Start, Pause, Resume, Restart, keyboard/touch controls, and game-over actions.
+- Single-sourced gameplay state.
+- Deterministic state exposure via window.app.
+
+## UI/UX Requirements
+- Language: English.
+- Palette: Background #0F172A, Surface #111827, Text #F8FAFC, Border #334155, Success #22C55E, Error #F43F5E, Warning #F59E0B.
+- Typography: System sans.
+- Components: Stable board dimensions (10x20), Next piece, Hold piece, Score, Level, Lines.
+
+## Screens to Generate
+1. Game Board (Main gameplay)
+2. Main Menu (Start, difficulty)
+3. Pause Overlay (Resume, Restart)
+4. Game Over (Results, Replay)
+5. Controls Help (Key bindings)

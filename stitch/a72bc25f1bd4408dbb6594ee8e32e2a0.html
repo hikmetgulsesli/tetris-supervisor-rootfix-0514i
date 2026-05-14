@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Game Paused</title>
+<!-- Google Fonts & Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#363a3b",
+                      "surface-container-low": "#191c1e",
+                      "tertiary-container": "#ff7f8b",
+                      "secondary": "#4ae176",
+                      "inverse-on-surface": "#2d3133",
+                      "surface-variant": "#323537",
+                      "on-secondary-fixed": "#002109",
+                      "tertiary-fixed": "#ffdadb",
+                      "surface-container-highest": "#323537",
+                      "surface-dim": "#101415",
+                      "error": "#ffb4ab",
+                      "surface-container-high": "#272a2c",
+                      "on-secondary-container": "#004119",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#005321",
+                      "surface-container": "#1d2022",
+                      "surface-tint": "#4cd7f6",
+                      "on-primary-fixed": "#001f26",
+                      "secondary-fixed-dim": "#4ae176",
+                      "primary-container": "#06b6d4",
+                      "on-tertiary-fixed": "#40000d",
+                      "inverse-surface": "#e0e3e5",
+                      "inverse-primary": "#00687a",
+                      "on-primary-container": "#00424f",
+                      "on-secondary": "#003915",
+                      "tertiary-fixed-dim": "#ffb2b7",
+                      "outline-variant": "#3d494c",
+                      "error-container": "#93000a",
+                      "outline": "#869397",
+                      "on-surface": "#e0e3e5",
+                      "on-tertiary-container": "#7d0023",
+                      "surface-container-lowest": "#0b0f10",
+                      "on-primary": "#003640",
+                      "on-error": "#690005",
+                      "secondary-container": "#00b954",
+                      "tertiary": "#ffb2b7",
+                      "on-tertiary": "#67001b",
+                      "background": "#101415",
+                      "on-background": "#e0e3e5",
+                      "on-surface-variant": "#bcc9cd",
+                      "primary-fixed": "#acedff",
+                      "primary-fixed-dim": "#4cd7f6",
+                      "primary": "#4cd7f6",
+                      "surface": "#101415",
+                      "on-primary-fixed-variant": "#004e5c",
+                      "secondary-fixed": "#6bff8f",
+                      "on-tertiary-fixed-variant": "#92002a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "margin": "24px",
+                      "container-max": "1440px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Geist", "sans-serif"],
+                      "label-md": ["JetBrains Mono", "monospace"],
+                      "headline-md": ["Geist", "sans-serif"],
+                      "body-lg": ["Geist", "sans-serif"],
+                      "code-sm": ["JetBrains Mono", "monospace"],
+                      "body-md": ["Geist", "sans-serif"]
+              },
+              "fontSize": {
+                      "headline-lg": ["40px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                      "label-md": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                      "headline-md": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                      "body-lg": ["16px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                      "code-sm": ["11px", { "lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "400" }],
+                      "body-md": ["14px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Geist Font Loading via FontFace since it's not natively on Google Fonts in all weights yet */
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@latest/latin-400-normal.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@latest/latin-600-normal.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Geist';
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@latest/latin-700-normal.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased relative min-h-screen overflow-hidden">
+<!-- Mock Game Board Background -->
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="A highly detailed, top-down view of an intense cyberpunk arcade game board featuring glowing neon grids, fast-moving digital entities, and complex technical telemetry overlays. The environment is dark and moody, illuminated purely by the harsh cyan, green, and red light-emitting diodes from the game interface. The aesthetic is strictly technical minimalism mixed with retro-futuristic arcade energy, showcasing sharp geometric shapes and a high-contrast visual hierarchy." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQZDPOYqtgQTBdK_OEApCcxUmZhLQK7rHc54zyitv6wycGRwMSAgTYRftq0QwW1poiBxTYqCUIJjtDsn_I-4oSsMLLSn8IQHlpyYAZmY-lTE2Z7Uc3tmVq2oIeeOfH3VoIO4nViIT8zyqMVFhTDelKjWngeWxA2gNt1v3y1xNv_86Ba_7rHKzUPXzrrs-_i3EV0ADlEykd7e7Obj67pl8VNT9NfCbp-Nnb-6Uwql8Np9qEFK50CWIXdctPNn92v4r4oLbo-IkAvhQn');">
+</div>
+<!-- Pause Overlay Backdrop -->
+<div class="absolute inset-0 z-10 bg-background/85 backdrop-blur-md flex items-center justify-center p-gutter">
+<!-- Modal Container (Cyber-Grid Styled) -->
+<div class="relative w-full max-w-sm bg-surface-container-lowest border border-outline-variant flex flex-col shadow-2xl before:absolute before:-top-[1px] before:-left-[1px] before:w-4 before:h-4 before:border-t-2 before:border-l-2 before:border-primary after:absolute after:-bottom-[1px] after:-right-[1px] after:w-4 after:h-4 after:border-b-2 after:border-r-2 after:border-primary">
+<!-- Header Section -->
+<div class="flex items-center justify-between p-margin border-b border-outline-variant">
+<h1 class="font-headline-lg text-headline-lg text-primary uppercase tracking-tighter drop-shadow-[0_0_8px_rgba(76,215,246,0.3)]">
+                    Paused
+                </h1>
+<span class="material-symbols-outlined text-primary text-[32px] animate-pulse" style="font-variation-settings: 'FILL' 1;">
+                    pause_circle
+                </span>
+</div>
+<!-- Stats Summary Section -->
+<div class="p-margin grid grid-cols-2 gap-gutter bg-surface-container/50">
+<div class="flex flex-col gap-unit">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Current Score</span>
+<span class="font-label-md text-[24px] text-secondary leading-none">004,815,162</span>
+</div>
+<div class="flex flex-col gap-unit">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Level</span>
+<span class="font-label-md text-[24px] text-primary leading-none">042</span>
+</div>
+</div>
+<!-- Divider (Replaces Zebra Striping/Shadows) -->
+<div class="h-px w-full bg-outline-variant"></div>
+<!-- Actions Section -->
+<div class="p-margin flex flex-col gap-unit*2 gap-3">
+<!-- Resume Button (Primary) -->
+<button class="w-full py-3 px-4 bg-primary border border-primary text-on-primary font-label-md text-label-md uppercase tracking-widest hover:bg-primary-fixed hover:drop-shadow-[0_0_12px_rgba(76,215,246,0.6)] transition-all duration-200 flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">
+                        play_arrow
+                    </span>
+                    Resume
+                </button>
+<!-- Restart Button (Secondary) -->
+<button class="w-full py-3 px-4 bg-transparent border border-outline-variant text-on-surface font-label-md text-label-md uppercase tracking-widest hover:border-error hover:text-error hover:bg-error/10 transition-all duration-200 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">
+                        replay
+                    </span>
+                    Restart
+                </button>
+<!-- Main Menu Button (Secondary) -->
+<button class="w-full py-3 px-4 bg-transparent border border-outline-variant text-on-surface font-label-md text-label-md uppercase tracking-widest hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-200 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">
+                        grid_view
+                    </span>
+                    Main Menu
+                </button>
+</div>
+<!-- Controls Hint Footer -->
+<div class="bg-surface-variant/30 border-t border-outline-variant p-4 flex justify-center items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant opacity-80">
+                    PRESS <kbd class="px-1.5 py-0.5 border border-outline-variant rounded-sm bg-surface-container text-on-surface mx-1">ESC</kbd> TO RESUME
+                </span>
+</div>
+</div>
+</div>
+</body></html>
